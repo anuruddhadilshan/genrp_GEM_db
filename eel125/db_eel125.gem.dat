@@ -171,108 +171,123 @@ sbs.gem.plot_event_info = 1
 # initial guesses:
 # in the INFN X/Y layers, the "GEMPOS" index that defines the global module number runs from bottom to top
 # in the UVA X/Y layer, the "GEMPOS" index that defines the global module number runs from top to bottom
+
 sbs.gem.m0.position = -0.768 0 1.570
 sbs.gem.m1.position = -0.256 0 1.534
 sbs.gem.m2.position = 0.256 0 1.570
-sbs.gem.m3.position = 0.768 0 1.534
 
+sbs.gem.m3.position = 0.768 0 1.534
 sbs.gem.m4.position = -0.768 0 1.570
 sbs.gem.m5.position = -0.256 0 1.534
+
 sbs.gem.m6.position = 0.256 0 1.570
 sbs.gem.m7.position = 0.768 0 1.534
-
 sbs.gem.m8.position = -0.768 0 1.570
 sbs.gem.m9.position = -0.256 0 1.534
+
 sbs.gem.m10.position = 0.256 0 1.570
 sbs.gem.m11.position = 0.768 0 1.534
-
 sbs.gem.m12.position = -0.768 0 1.570
 sbs.gem.m13.position = -0.256 0 1.534
+
 sbs.gem.m14.position = 0.256 0 1.570
 sbs.gem.m15.position = 0.768 0 1.534
-
 sbs.gem.m16.position = -0.768 0 1.570
 sbs.gem.m17.position = -0.256 0 1.534
+
 sbs.gem.m18.position = 0.256 0 1.570
 sbs.gem.m19.position = 0.768 0 1.534
-
 sbs.gem.m20.position = -0.768 0 1.570
 sbs.gem.m21.position = -0.256 0 1.534
+
 sbs.gem.m22.position = 0.256 0 1.570
 sbs.gem.m23.position = 0.768 0 1.534
-
 sbs.gem.m24.position = -0.768 0 1.570
 sbs.gem.m25.position = -0.256 0 1.534
+
 sbs.gem.m26.position = 0.256 0 1.570
 sbs.gem.m27.position = 0.768 0 1.534
-
 sbs.gem.m28.position = -0.768 0 1.570
 sbs.gem.m29.position = -0.256 0 1.534
+
 sbs.gem.m30.position = 0.256 0 1.570
 sbs.gem.m31.position = 0.768 0 1.534
-
 sbs.gem.m32.position = -0.768 0 1.570
 sbs.gem.m33.position = -0.256 0 1.534
+
 sbs.gem.m34.position = 0.256 0 1.570
 sbs.gem.m35.position = 0.768 0 1.534
-
 sbs.gem.m36.position = -0.768 0 1.570
 sbs.gem.m37.position = -0.256 0 1.534
+
 sbs.gem.m38.position = 0.256 0 1.570
 sbs.gem.m39.position = 0.768 0 1.534
+sbs.gem.m40.position = 0.256 0 1.570
+sbs.gem.m41.position = 0.768 0 1.534
+
+sbs.gem.m42.position = 0.256 0 1.570
+sbs.gem.m43.position = 0.768 0 1.534
+sbs.gem.m44.position = 0.256 0 1.570
+sbs.gem.m45.position = 0.768 0 1.534
 
 
-
-sbs.gem.m0.angle =  0 0 0
+sbs.gem.m0.angle = 0 0 0
 sbs.gem.m1.angle = 0 0 0
 sbs.gem.m2.angle = 0 0 0
-sbs.gem.m3.angle = 0 0 0
 
-sbs.gem.m4.angle =  0 0 0
+sbs.gem.m3.angle = 0 0 0
+sbs.gem.m4.angle = 0 0 0
 sbs.gem.m5.angle = 0 0 0
+
 sbs.gem.m6.angle = 0 0 0
 sbs.gem.m7.angle = 0 0 0
-
-sbs.gem.m8.angle =  0 0 0
+sbs.gem.m8.angle = 0 0 0
 sbs.gem.m9.angle = 0 0 0
+
 sbs.gem.m10.angle = 0 0 0
 sbs.gem.m11.angle = 0 0 0
-
-sbs.gem.m12.angle =  0 0 0
+sbs.gem.m12.angle = 0 0 0
 sbs.gem.m13.angle = 0 0 0
+
 sbs.gem.m14.angle = 0 0 0
 sbs.gem.m15.angle = 0 0 0
-
-sbs.gem.m16.angle =  0 0 0
+sbs.gem.m16.angle = 0 0 0
 sbs.gem.m17.angle = 0 0 0
+
 sbs.gem.m18.angle = 0 0 0
 sbs.gem.m19.angle = 0 0 0
-
-sbs.gem.m20.angle =  0 0 0
+sbs.gem.m20.angle = 0 0 0
 sbs.gem.m21.angle = 0 0 0
+
 sbs.gem.m22.angle = 0 0 0
 sbs.gem.m23.angle = 0 0 0
-
-sbs.gem.m24.angle =  0 0 0
+sbs.gem.m24.angle = 0 0 0
 sbs.gem.m25.angle = 0 0 0
+
 sbs.gem.m26.angle = 0 0 0
 sbs.gem.m27.angle = 0 0 0
-
-sbs.gem.m28.angle =  0 0 0
+sbs.gem.m28.angle = 0 0 0
 sbs.gem.m29.angle = 0 0 0
+
 sbs.gem.m30.angle = 0 0 0
 sbs.gem.m31.angle = 0 0 0
-
-sbs.gem.m32.angle =  0 0 0
+sbs.gem.m32.angle = 0 0 0
 sbs.gem.m33.angle = 0 0 0
+
 sbs.gem.m34.angle = 0 0 0
 sbs.gem.m35.angle = 0 0 0
-
-sbs.gem.m36.angle =  0 0 0
+sbs.gem.m36.angle = 0 0 0
 sbs.gem.m37.angle = 0 0 0
+
 sbs.gem.m38.angle = 0 0 0
 sbs.gem.m39.angle = 0 0 0
+sbs.gem.m40.angle = 0 0 0
+sbs.gem.m41.angle = 0 0 0
 
+sbs.gem.m42.angle = 0 0 0
+sbs.gem.m43.angle = 0 0 0
+sbs.gem.m44.angle = 0 0 0
+sbs.gem.m45.angle = 0 0 0
 
 
 # Module sizes: INFN XY = (0.512 0.4096 0.001) , UVA XY = (0.512 0.6144 0.001)
@@ -350,95 +365,112 @@ sbs.gem.m45.size = 0.512 0.6144 0.001
 # for the UVA X/Y modules the "X" axis coincides with the direction of transport coordinates but the "Y" axis is opposite the direction of transport coordinates:
 # as confirmed by Sean Jeffas:
 
-sbs.gem.m0.uangle = 0.0
-sbs.gem.m0.vangle = -90.0
-sbs.gem.m1.uangle = 0.0
-sbs.gem.m1.vangle = -90.0
-sbs.gem.m2.uangle = 0.0
-sbs.gem.m2.vangle = -90.0
-sbs.gem.m3.uangle = 0.0
-sbs.gem.m3.vangle = -90.0
+### Might need to change these to account for layer flipping ###
 
-sbs.gem.m4.uangle = 0.0
-sbs.gem.m4.vangle = -90.0
-sbs.gem.m5.uangle = 0.0
-sbs.gem.m5.vangle = -90.0
+sbs.gem.m0.uangle = 180.0
+sbs.gem.m0.vangle = 90.0
+sbs.gem.m1.uangle = 180.0
+sbs.gem.m1.vangle = 90.0
+sbs.gem.m2.uangle = 180.0
+sbs.gem.m2.vangle = 90.0
+
+sbs.gem.m3.uangle = 180.0
+sbs.gem.m3.vangle = 90.0
+sbs.gem.m4.uangle = 180.0
+sbs.gem.m4.vangle = 90.0
+sbs.gem.m5.uangle = 180.0
+sbs.gem.m5.vangle = 90.0
+
 sbs.gem.m6.uangle = 0.0
 sbs.gem.m6.vangle = -90.0
 sbs.gem.m7.uangle = 0.0
 sbs.gem.m7.vangle = -90.0
-
 sbs.gem.m8.uangle = 0.0
 sbs.gem.m8.vangle = -90.0
 sbs.gem.m9.uangle = 0.0
 sbs.gem.m9.vangle = -90.0
+
 sbs.gem.m10.uangle = 0.0
 sbs.gem.m10.vangle = -90.0
 sbs.gem.m11.uangle = 0.0
 sbs.gem.m11.vangle = -90.0
-
 sbs.gem.m12.uangle = 0.0
 sbs.gem.m12.vangle = -90.0
 sbs.gem.m13.uangle = 0.0
 sbs.gem.m13.vangle = -90.0
+
 sbs.gem.m14.uangle = 0.0
 sbs.gem.m14.vangle = -90.0
 sbs.gem.m15.uangle = 0.0
 sbs.gem.m15.vangle = -90.0
-
 sbs.gem.m16.uangle = 0.0
 sbs.gem.m16.vangle = -90.0
 sbs.gem.m17.uangle = 0.0
 sbs.gem.m17.vangle = -90.0
+
 sbs.gem.m18.uangle = 0.0
 sbs.gem.m18.vangle = -90.0
 sbs.gem.m19.uangle = 0.0
 sbs.gem.m19.vangle = -90.0
-
 sbs.gem.m20.uangle = 0.0
 sbs.gem.m20.vangle = -90.0
 sbs.gem.m21.uangle = 0.0
 sbs.gem.m21.vangle = -90.0
+
 sbs.gem.m22.uangle = 0.0
 sbs.gem.m22.vangle = -90.0
 sbs.gem.m23.uangle = 0.0
 sbs.gem.m23.vangle = -90.0
-
 sbs.gem.m24.uangle = 0.0
 sbs.gem.m24.vangle = -90.0
 sbs.gem.m25.uangle = 0.0
 sbs.gem.m25.vangle = -90.0
+
 sbs.gem.m26.uangle = 0.0
 sbs.gem.m26.vangle = -90.0
 sbs.gem.m27.uangle = 0.0
 sbs.gem.m27.vangle = -90.0
-
 sbs.gem.m28.uangle = 0.0
 sbs.gem.m28.vangle = -90.0
 sbs.gem.m29.uangle = 0.0
 sbs.gem.m29.vangle = -90.0
+
 sbs.gem.m30.uangle = 0.0
 sbs.gem.m30.vangle = -90.0
 sbs.gem.m31.uangle = 0.0
 sbs.gem.m31.vangle = -90.0
-
 sbs.gem.m32.uangle = 0.0
 sbs.gem.m32.vangle = -90.0
 sbs.gem.m33.uangle = 0.0
 sbs.gem.m33.vangle = -90.0
+
 sbs.gem.m34.uangle = 0.0
 sbs.gem.m34.vangle = -90.0
 sbs.gem.m35.uangle = 0.0
 sbs.gem.m35.vangle = -90.0
-
 sbs.gem.m36.uangle = 0.0
 sbs.gem.m36.vangle = -90.0
 sbs.gem.m37.uangle = 0.0
 sbs.gem.m37.vangle = -90.0
+
 sbs.gem.m38.uangle = 0.0
 sbs.gem.m38.vangle = -90.0
 sbs.gem.m39.uangle = 0.0
 sbs.gem.m39.vangle = -90.0
+sbs.gem.m40.uangle = 0.0
+sbs.gem.m40.vangle = -90.0
+sbs.gem.m41.uangle = 0.0
+sbs.gem.m41.vangle = -90.0
+
+sbs.gem.m42.uangle = 0.0
+sbs.gem.m42.vangle = -90.0
+sbs.gem.m43.uangle = 0.0
+sbs.gem.m43.vangle = -90.0
+sbs.gem.m44.uangle = 0.0
+sbs.gem.m44.vangle = -90.0
+sbs.gem.m45.uangle = 0.0
+sbs.gem.m45.vangle = -90.0
+
 
 # U/V strip offsets: for X/Y GEMS, INFN and UVA alike, we are probably safe to stick with (0,0).
 # for U/V strip GEMs, the needed offsets are non-zero:
@@ -557,96 +589,108 @@ sbs.gem.m39.voffset = 0.0
 
 
 sbs.gem.m0.nstripsu = 1280
-sbs.gem.m0.nstripsv = 1536
+sbs.gem.m0.nstripsv = 1024
 sbs.gem.m1.nstripsu = 1280
-sbs.gem.m1.nstripsv = 1536
+sbs.gem.m1.nstripsv = 1024
 sbs.gem.m2.nstripsu = 1280
-sbs.gem.m2.nstripsv = 1536
-sbs.gem.m3.nstripsu = 1280
-sbs.gem.m3.nstripsv = 1536
+sbs.gem.m2.nstripsv = 1024
 
+sbs.gem.m3.nstripsu = 1280
+sbs.gem.m3.nstripsv = 1024
 sbs.gem.m4.nstripsu = 1280
-sbs.gem.m4.nstripsv = 1536
+sbs.gem.m4.nstripsv = 1024
 sbs.gem.m5.nstripsu = 1280
-sbs.gem.m5.nstripsv = 1536
+sbs.gem.m5.nstripsv = 1024
+
 sbs.gem.m6.nstripsu = 1280
 sbs.gem.m6.nstripsv = 1536
 sbs.gem.m7.nstripsu = 1280
 sbs.gem.m7.nstripsv = 1536
-
 sbs.gem.m8.nstripsu = 1280
 sbs.gem.m8.nstripsv = 1536
 sbs.gem.m9.nstripsu = 1280
 sbs.gem.m9.nstripsv = 1536
+
 sbs.gem.m10.nstripsu = 1280
 sbs.gem.m10.nstripsv = 1536
 sbs.gem.m11.nstripsu = 1280
 sbs.gem.m11.nstripsv = 1536
-
 sbs.gem.m12.nstripsu = 1280
 sbs.gem.m12.nstripsv = 1536
 sbs.gem.m13.nstripsu = 1280
 sbs.gem.m13.nstripsv = 1536
+
 sbs.gem.m14.nstripsu = 1280
 sbs.gem.m14.nstripsv = 1536
 sbs.gem.m15.nstripsu = 1280
 sbs.gem.m15.nstripsv = 1536
-
 sbs.gem.m16.nstripsu = 1280
 sbs.gem.m16.nstripsv = 1536
 sbs.gem.m17.nstripsu = 1280
 sbs.gem.m17.nstripsv = 1536
+
 sbs.gem.m18.nstripsu = 1280
 sbs.gem.m18.nstripsv = 1536
 sbs.gem.m19.nstripsu = 1280
 sbs.gem.m19.nstripsv = 1536
-
 sbs.gem.m20.nstripsu = 1280
 sbs.gem.m20.nstripsv = 1536
 sbs.gem.m21.nstripsu = 1280
 sbs.gem.m21.nstripsv = 1536
+
 sbs.gem.m22.nstripsu = 1280
 sbs.gem.m22.nstripsv = 1536
 sbs.gem.m23.nstripsu = 1280
 sbs.gem.m23.nstripsv = 1536
-
 sbs.gem.m24.nstripsu = 1280
 sbs.gem.m24.nstripsv = 1536
 sbs.gem.m25.nstripsu = 1280
 sbs.gem.m25.nstripsv = 1536
+
 sbs.gem.m26.nstripsu = 1280
 sbs.gem.m26.nstripsv = 1536
 sbs.gem.m27.nstripsu = 1280
 sbs.gem.m27.nstripsv = 1536
-
 sbs.gem.m28.nstripsu = 1280
 sbs.gem.m28.nstripsv = 1536
 sbs.gem.m29.nstripsu = 1280
 sbs.gem.m29.nstripsv = 1536
+
 sbs.gem.m30.nstripsu = 1280
 sbs.gem.m30.nstripsv = 1536
 sbs.gem.m31.nstripsu = 1280
 sbs.gem.m31.nstripsv = 1536
-
 sbs.gem.m32.nstripsu = 1280
 sbs.gem.m32.nstripsv = 1536
 sbs.gem.m33.nstripsu = 1280
 sbs.gem.m33.nstripsv = 1536
+
 sbs.gem.m34.nstripsu = 1280
 sbs.gem.m34.nstripsv = 1536
 sbs.gem.m35.nstripsu = 1280
 sbs.gem.m35.nstripsv = 1536
-
 sbs.gem.m36.nstripsu = 1280
 sbs.gem.m36.nstripsv = 1536
 sbs.gem.m37.nstripsu = 1280
 sbs.gem.m37.nstripsv = 1536
+
 sbs.gem.m38.nstripsu = 1280
 sbs.gem.m38.nstripsv = 1536
 sbs.gem.m39.nstripsu = 1280
 sbs.gem.m39.nstripsv = 1536
+sbs.gem.m40.nstripsu = 1280
+sbs.gem.m40.nstripsv = 1536
+sbs.gem.m41.nstripsu = 1280
+sbs.gem.m41.nstripsv = 1536
 
-
+sbs.gem.m42.nstripsu = 1280
+sbs.gem.m42.nstripsv = 1536
+sbs.gem.m43.nstripsu = 1280
+sbs.gem.m43.nstripsv = 1536
+sbs.gem.m44.nstripsu = 1280
+sbs.gem.m44.nstripsv = 1536
+sbs.gem.m45.nstripsu = 1280
+sbs.gem.m45.nstripsv = 1536
 
 # all modules have the same strip pitch along both dimensions, 0.4 mm:
 sbs.gem.upitch = 0.0004
