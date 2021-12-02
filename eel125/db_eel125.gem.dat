@@ -8,24 +8,30 @@
 
 # Geometry and calibration/decode information:
 
-# SBS GEMs as in the GEn-RP run: Layer 0 = 3X INFN X/Y , Layer 1 = 3X INFN X/Y, Layer 2 = 4X UVA X/Y, Layer 3 = 4X UVA X/Y, Layer 4 = 4X UVA X/Y, Layer 5 = 4X UVA X/Y, Layer 6 = 4X UVA X/Y, Layer 7 = 4X UVA X/Y, Layer 8 = 4X UVA X/Y, Layer 9 = 4X UVA X/Y, Layer 10 = 4X UVA X/Y, Layer 11 = 4X UVA X/Y
+#For the purpose of cosmic testing in EEL/125, we have put all the 3 production chambers one after the other in the order: Right Polarimeter (with 2 UVA-XY GEM layers) -> Inline Frame (with 2 INFN-XY layers plus 6 UVA-XY layers) -> Left Polarimeter (with 2 UVA-XY GEM layers)
 
-sbs.gem.modules = m0 m1 m2  	 m3 m4 m5     m6 m7 m8 m9      m10 m11 m12 m13	   m14 m15 m16 m17   m18 m19 m20 m21  	m22 m23 m24 m25	  m26 m27 m28 m29 	m30 m31 m32 m33	      m34 m35 m36 m37 	    m38 m39 m40 m41   	 m42 m43 m44 m45 	    
+# SBS GEMs as in the EEL/125 cosmic setup: Layer 0 = 4X UVA X/Y, Layer 1 = 4X UVA X/Y, Layer 2 = 3X INFN X/Y , Layer 3 = 3X INFN X/Y, Layer 4 = 4X UVA X/Y, Layer 5 = 4X UVA X/Y, Layer 6 = 4X UVA X/Y, Layer 7 = 4X UVA X/Y, Layer 8 = 4X UVA X/Y, Layer 9 = 4X UVA X/Y, Layer 10 = 4X UVA X/Y, Layer 11 = 4X UVA X/Y
+
+# Right Polarimeter: Layer 0, Layer 1
+# Inline : Layer 2, Layer 3, Layer 4, Layer 5, Layer 6, Layer 7, Layer 8, Layer 9
+# Left Polarimeter : Layer 10, Layer 11
+
+sbs.gem.modules = m0 m1 m2 m3  	     m4 m5 m6 m7	m8 m9 m10	m11 m12 m13	m14 m15 m16 m17		m18 m19 m20 m21  	m22 m23 m24 m25		m26 m27 m28 m29 	m30 m31 m32 m33	      m34 m35 m36 m37 	    m38 m39 m40 m41   	 m42 m43 m44 m45 	    
 
 sbs.gem.m0.layer = 0
 sbs.gem.m1.layer = 0
 sbs.gem.m2.layer = 0
+sbs.gem.m3.layer = 0
 
-sbs.gem.m3.layer = 1
 sbs.gem.m4.layer = 1
 sbs.gem.m5.layer = 1
+sbs.gem.m6.layer = 1
+sbs.gem.m7.layer = 1
 
-sbs.gem.m6.layer = 2
-sbs.gem.m7.layer = 2
-sbs.gem.m8.layer = 2
-sbs.gem.m9.layer = 2
+sbs.gem.m8.layer  = 2
+sbs.gem.m9.layer  = 2
+sbs.gem.m10.layer = 2
 
-sbs.gem.m10.layer = 3
 sbs.gem.m11.layer = 3
 sbs.gem.m12.layer = 3
 sbs.gem.m13.layer = 3
@@ -75,23 +81,23 @@ sbs.gem.m45.layer = 11
 # APV mapping configurations: 0 = INFN, 1 = UVA X/Y, 2 = UVA U/V
 
 
-sbs.gem.m0.apvmap = 0
-sbs.gem.m1.apvmap = 0
-sbs.gem.m2.apvmap = 0
+sbs.gem.m0.apvmap = 1
+sbs.gem.m1.apvmap = 1
+sbs.gem.m2.apvmap = 1
+sbs.gem.m3.apvmap = 1
 
-sbs.gem.m3.apvmap = 0
-sbs.gem.m4.apvmap = 0
-sbs.gem.m5.apvmap = 0
-
+sbs.gem.m4.apvmap = 1
+sbs.gem.m5.apvmap = 1
 sbs.gem.m6.apvmap = 1
 sbs.gem.m7.apvmap = 1
-sbs.gem.m8.apvmap = 1
-sbs.gem.m9.apvmap = 1
 
-sbs.gem.m10.apvmap = 1
-sbs.gem.m11.apvmap = 1
-sbs.gem.m12.apvmap = 1
-sbs.gem.m13.apvmap = 1
+sbs.gem.m8.apvmap  = 0
+sbs.gem.m9.apvmap  = 0
+sbs.gem.m10.apvmap = 0
+
+sbs.gem.m11.apvmap = 0
+sbs.gem.m12.apvmap = 0
+sbs.gem.m13.apvmap = 0
 
 sbs.gem.m14.apvmap = 1
 sbs.gem.m15.apvmap = 1
@@ -166,69 +172,98 @@ sbs.gem.plot_event_info = 1
 
 # to start with, let's not worry about the misalignments, let's put everything at its nominal/ideal position:
 
-#sbs.gem.m0.position = 0 0 0
-
 # initial guesses:
 # in the INFN X/Y layers, the "GEMPOS" index that defines the global module number runs from bottom to top
 # in the UVA X/Y layer, the "GEMPOS" index that defines the global module number runs from top to bottom
 
-sbs.gem.m0.position = -0.768 0 1.570
-sbs.gem.m1.position = -0.256 0 1.534
-sbs.gem.m2.position = 0.256 0 1.570
 
-sbs.gem.m3.position = 0.768 0 1.534
+
+////Right polarimeter////
+
+//First railing - UVA Double - Z cooridinates of the railing = 0 m
+//Type A layer
+sbs.gem.m0.position = -0.768 0 1.570    
+sbs.gem.m1.position = -0.256 0 1.534
+sbs.gem.m2.position =  0.256 0 1.570
+sbs.gem.m3.position =  0.768 0 1.534
+//Type B layer
 sbs.gem.m4.position = -0.768 0 1.570
 sbs.gem.m5.position = -0.256 0 1.534
+sbs.gem.m6.position =  0.256 0 1.570
+sbs.gem.m7.position =  0.768 0 1.534
 
-sbs.gem.m6.position = 0.256 0 1.570
-sbs.gem.m7.position = 0.768 0 1.534
-sbs.gem.m8.position = -0.768 0 1.570
-sbs.gem.m9.position = -0.256 0 1.534
+////
 
-sbs.gem.m10.position = 0.256 0 1.570
-sbs.gem.m11.position = 0.768 0 1.534
-sbs.gem.m12.position = -0.768 0 1.570
-sbs.gem.m13.position = -0.256 0 1.534
 
+////Inline Frame////
+
+//First railing - INFN double - Z coordinate of the railing = 0.677 m = spacing between the two railings of the right plarimeter and inline first raling = d1 //Need to re-measure
+//Alos the two INFN layers are shifted in X dimension (vertical dimention) and also not touching each other. Need to account for those.
+sbs.gem.m8.position  =  0.535 0 1.570
+sbs.gem.m9.position  =  0 0 1.534
+sbs.gem.m10.position = -0.535 0 1.570
+
+sbs.gem.m11.position = 0.535 0 1.534
+sbs.gem.m12.position = 0 0 1.570
+sbs.gem.m13.position = -0.535 0 1.534
+
+//Second railing - UVA double - Z coordinate of the railing = d + 0.267 m (from the drawing)
+//Type B layer
 sbs.gem.m14.position = 0.256 0 1.570
 sbs.gem.m15.position = 0.768 0 1.534
 sbs.gem.m16.position = -0.768 0 1.570
 sbs.gem.m17.position = -0.256 0 1.534
-
+//Type A layer
 sbs.gem.m18.position = 0.256 0 1.570
 sbs.gem.m19.position = 0.768 0 1.534
 sbs.gem.m20.position = -0.768 0 1.570
 sbs.gem.m21.position = -0.256 0 1.534
 
+
+//Third railing - UVA double - Z coordinate of the railing = d + 0.593 m (from the drawing)
+//Type B layer
 sbs.gem.m22.position = 0.256 0 1.570
 sbs.gem.m23.position = 0.768 0 1.534
 sbs.gem.m24.position = -0.768 0 1.570
 sbs.gem.m25.position = -0.256 0 1.534
-
+//Type A layer
 sbs.gem.m26.position = 0.256 0 1.570
 sbs.gem.m27.position = 0.768 0 1.534
 sbs.gem.m28.position = -0.768 0 1.570
 sbs.gem.m29.position = -0.256 0 1.534
 
+
+//Fourth railing - UVA single - Z coordinate of the railing = d + 0.721 m (from the drawing)
+//Type A layer
 sbs.gem.m30.position = 0.256 0 1.570
 sbs.gem.m31.position = 0.768 0 1.534
 sbs.gem.m32.position = -0.768 0 1.570
 sbs.gem.m33.position = -0.256 0 1.534
 
+//Fifth raling - UVA single - Z coordinate of the raling = d + 0.848 m (from the drawing)
+//Type A layer
 sbs.gem.m34.position = 0.256 0 1.570
 sbs.gem.m35.position = 0.768 0 1.534
 sbs.gem.m36.position = -0.768 0 1.570
 sbs.gem.m37.position = -0.256 0 1.534
 
+////
+
+////Left polarimeter////
+
+//First railing - UVA double - Z coordinate of the railing = to be measured
+//Tyep B layer
 sbs.gem.m38.position = 0.256 0 1.570
 sbs.gem.m39.position = 0.768 0 1.534
 sbs.gem.m40.position = 0.256 0 1.570
 sbs.gem.m41.position = 0.768 0 1.534
-
+//Type A layer
 sbs.gem.m42.position = 0.256 0 1.570
 sbs.gem.m43.position = 0.768 0 1.534
 sbs.gem.m44.position = 0.256 0 1.570
 sbs.gem.m45.position = 0.768 0 1.534
+
+////
 
 
 sbs.gem.m0.angle = 0 0 0
@@ -293,23 +328,23 @@ sbs.gem.m45.angle = 0 0 0
 # Module sizes: INFN XY = (0.512 0.4096 0.001) , UVA XY = (0.512 0.6144 0.001)
 
 
-sbs.gem.m0.size = 0.512 0.4096 0.001
-sbs.gem.m1.size = 0.512 0.4096 0.001
-sbs.gem.m2.size = 0.512 0.4096 0.001
+sbs.gem.m0.size = 0.512 0.6144 0.001
+sbs.gem.m1.size = 0.512 0.6144 0.001
+sbs.gem.m2.size = 0.512 0.6144 0.001
+sbs.gem.m3.size = 0.512 0.6144 0.001
 
-sbs.gem.m3.size = 0.512 0.4096 0.001
-sbs.gem.m4.size = 0.512 0.4096 0.001
-sbs.gem.m5.size = 0.512 0.4096 0.001
-
+sbs.gem.m4.size = 0.512 0.6144 0.001
+sbs.gem.m5.size = 0.512 0.6144 0.001
 sbs.gem.m6.size = 0.512 0.6144 0.001
 sbs.gem.m7.size = 0.512 0.6144 0.001
-sbs.gem.m8.size = 0.512 0.6144 0.001
-sbs.gem.m9.size = 0.512 0.6144 0.001
 
-sbs.gem.m10.size = 0.512 0.6144 0.001
-sbs.gem.m11.size = 0.512 0.6144 0.001
-sbs.gem.m12.size = 0.512 0.6144 0.001
-sbs.gem.m13.size = 0.512 0.6144 0.001
+sbs.gem.m8.size  = 0.512 0.4096 0.001
+sbs.gem.m9.size  = 0.512 0.4096 0.001
+sbs.gem.m10.size = 0.512 0.4096 0.001
+
+sbs.gem.m11.size = 0.512 0.4096 0.001
+sbs.gem.m12.size = 0.512 0.4096 0.001
+sbs.gem.m13.size = 0.512 0.4096 0.001
 
 sbs.gem.m14.size = 0.512 0.6144 0.001
 sbs.gem.m15.size = 0.512 0.6144 0.001
@@ -365,39 +400,39 @@ sbs.gem.m45.size = 0.512 0.6144 0.001
 # for the UVA X/Y modules the "X" axis coincides with the direction of transport coordinates but the "Y" axis is opposite the direction of transport coordinates:
 # as confirmed by Sean Jeffas:
 
-### Might need to change these to account for layer flipping ###
 
-sbs.gem.m0.uangle = 180.0
-sbs.gem.m0.vangle = 90.0
-sbs.gem.m1.uangle = 180.0
-sbs.gem.m1.vangle = 90.0
-sbs.gem.m2.uangle = 180.0
-sbs.gem.m2.vangle = 90.0
 
-sbs.gem.m3.uangle = 180.0
-sbs.gem.m3.vangle = 90.0
-sbs.gem.m4.uangle = 180.0
-sbs.gem.m4.vangle = 90.0
-sbs.gem.m5.uangle = 180.0
-sbs.gem.m5.vangle = 90.0
+sbs.gem.m0.uangle = 0.0
+sbs.gem.m0.vangle = -90.0
+sbs.gem.m1.uangle = 0.0
+sbs.gem.m1.vangle = -90.0
+sbs.gem.m2.uangle = 0.0
+sbs.gem.m2.vangle = -90.0
+sbs.gem.m3.uangle = 0.0
+sbs.gem.m3.vangle = -90.0
 
+sbs.gem.m4.uangle = 0.0
+sbs.gem.m4.vangle = -90.0
+sbs.gem.m5.uangle = 0.0
+sbs.gem.m5.vangle = -90.0
 sbs.gem.m6.uangle = 0.0
 sbs.gem.m6.vangle = -90.0
 sbs.gem.m7.uangle = 0.0
 sbs.gem.m7.vangle = -90.0
-sbs.gem.m8.uangle = 0.0
-sbs.gem.m8.vangle = -90.0
-sbs.gem.m9.uangle = 0.0
-sbs.gem.m9.vangle = -90.0
 
-sbs.gem.m10.uangle = 0.0
-sbs.gem.m10.vangle = -90.0
-sbs.gem.m11.uangle = 0.0
-sbs.gem.m11.vangle = -90.0
-sbs.gem.m12.uangle = 0.0
-sbs.gem.m12.vangle = -90.0
-sbs.gem.m13.uangle = 0.0
-sbs.gem.m13.vangle = -90.0
+sbs.gem.m8.uangle  = 180.0
+sbs.gem.m8.vangle  = 90.0
+sbs.gem.m9.uangle  = 180.0
+sbs.gem.m9.vangle  = 90.0
+sbs.gem.m10.uangle = 180.0
+sbs.gem.m10.vangle = 90.0
+
+sbs.gem.m11.uangle = 180.0
+sbs.gem.m11.vangle = 90.0
+sbs.gem.m12.uangle = 180.0
+sbs.gem.m12.vangle = 90.0
+sbs.gem.m13.uangle = 180.0
+sbs.gem.m13.vangle = 90.0
 
 sbs.gem.m14.uangle = 0.0
 sbs.gem.m14.vangle = -90.0
@@ -487,45 +522,54 @@ sbs.gem.m5.uoffset = 0.0
 sbs.gem.m6.uoffset = 0.0
 sbs.gem.m7.uoffset = 0.0
 
-sbs.gem.m8.uoffset = 0.0
-sbs.gem.m9.uoffset = 0.0
+sbs.gem.m8.uoffset  = 0.0
+sbs.gem.m9.uoffset  = 0.0
 sbs.gem.m10.uoffset = 0.0
-sbs.gem.m11.uoffset = 0.0
 
+sbs.gem.m11.uoffset = 0.0
 sbs.gem.m12.uoffset = 0.0
 sbs.gem.m13.uoffset = 0.0
+
 sbs.gem.m14.uoffset = 0.0
 sbs.gem.m15.uoffset = 0.0
-
 sbs.gem.m16.uoffset = 0.0
 sbs.gem.m17.uoffset = 0.0
+
 sbs.gem.m18.uoffset = 0.0
 sbs.gem.m19.uoffset = 0.0
-
 sbs.gem.m20.uoffset = 0.0
 sbs.gem.m21.uoffset = 0.0
+
 sbs.gem.m22.uoffset = 0.0
 sbs.gem.m23.uoffset = 0.0
-
 sbs.gem.m24.uoffset = 0.0
 sbs.gem.m25.uoffset = 0.0
+
 sbs.gem.m26.uoffset = 0.0
 sbs.gem.m27.uoffset = 0.0
-
 sbs.gem.m28.uoffset = 0.0
 sbs.gem.m29.uoffset = 0.0
+
 sbs.gem.m30.uoffset = 0.0
 sbs.gem.m31.uoffset = 0.0
-
 sbs.gem.m32.uoffset = 0.0
 sbs.gem.m33.uoffset = 0.0
+
 sbs.gem.m34.uoffset = 0.0
 sbs.gem.m35.uoffset = 0.0
-
 sbs.gem.m36.uoffset = 0.0
 sbs.gem.m37.uoffset = 0.0
+
 sbs.gem.m38.uoffset = 0.0
 sbs.gem.m39.uoffset = 0.0
+sbs.gem.m40.uoffset = 0.0
+sbs.gem.m41.uoffset = 0.0
+
+sbs.gem.m42.uoffset = 0.0
+sbs.gem.m43.uoffset = 0.0
+sbs.gem.m44.uoffset = 0.0
+sbs.gem.m45.uoffset = 0.0
+
 
 # V offsets:
 
@@ -542,42 +586,52 @@ sbs.gem.m7.voffset = 0.0
 sbs.gem.m8.voffset = 0.0
 sbs.gem.m9.voffset = 0.0
 sbs.gem.m10.voffset = 0.0
-sbs.gem.m11.voffset = 0.0
 
+sbs.gem.m11.voffset = 0.0
 sbs.gem.m12.voffset = 0.0
 sbs.gem.m13.voffset = 0.0
+
 sbs.gem.m14.voffset = 0.0
 sbs.gem.m15.voffset = 0.0
-
 sbs.gem.m16.voffset = 0.0
 sbs.gem.m17.voffset = 0.0
+
 sbs.gem.m18.voffset = 0.0
 sbs.gem.m19.voffset = 0.0
-
 sbs.gem.m20.voffset = 0.0
 sbs.gem.m21.voffset = 0.0
+
 sbs.gem.m22.voffset = 0.0
 sbs.gem.m23.voffset = 0.0
-
 sbs.gem.m24.voffset = 0.0
 sbs.gem.m25.voffset = 0.0
+
 sbs.gem.m26.voffset = 0.0
 sbs.gem.m27.voffset = 0.0
-
 sbs.gem.m28.voffset = 0.0
 sbs.gem.m29.voffset = 0.0
+
 sbs.gem.m30.voffset = 0.0
 sbs.gem.m31.voffset = 0.0
-
 sbs.gem.m32.voffset = 0.0
 sbs.gem.m33.voffset = 0.0
+
 sbs.gem.m34.voffset = 0.0
 sbs.gem.m35.voffset = 0.0
-
 sbs.gem.m36.voffset = 0.0
 sbs.gem.m37.voffset = 0.0
+
 sbs.gem.m38.voffset = 0.0
 sbs.gem.m39.voffset = 0.0
+sbs.gem.m40.voffset = 0.0
+sbs.gem.m41.voffset = 0.0
+
+sbs.gem.m42.voffset = 0.0
+sbs.gem.m43.voffset = 0.0
+sbs.gem.m44.voffset = 0.0
+sbs.gem.m45.voffset = 0.0
+
+
 
 # strip counts: these are easy for the X/Y modules but less trivial for the U/V modules:
 
@@ -589,36 +643,36 @@ sbs.gem.m39.voffset = 0.0
 
 
 sbs.gem.m0.nstripsu = 1280
-sbs.gem.m0.nstripsv = 1024
+sbs.gem.m0.nstripsv = 1536
 sbs.gem.m1.nstripsu = 1280
-sbs.gem.m1.nstripsv = 1024
+sbs.gem.m1.nstripsv = 1536
 sbs.gem.m2.nstripsu = 1280
-sbs.gem.m2.nstripsv = 1024
-
+sbs.gem.m2.nstripsv = 1536
 sbs.gem.m3.nstripsu = 1280
-sbs.gem.m3.nstripsv = 1024
-sbs.gem.m4.nstripsu = 1280
-sbs.gem.m4.nstripsv = 1024
-sbs.gem.m5.nstripsu = 1280
-sbs.gem.m5.nstripsv = 1024
+sbs.gem.m3.nstripsv = 1536
 
+sbs.gem.m4.nstripsu = 1280
+sbs.gem.m4.nstripsv = 1536
+sbs.gem.m5.nstripsu = 1280
+sbs.gem.m5.nstripsv = 1536
 sbs.gem.m6.nstripsu = 1280
 sbs.gem.m6.nstripsv = 1536
 sbs.gem.m7.nstripsu = 1280
 sbs.gem.m7.nstripsv = 1536
-sbs.gem.m8.nstripsu = 1280
-sbs.gem.m8.nstripsv = 1536
-sbs.gem.m9.nstripsu = 1280
-sbs.gem.m9.nstripsv = 1536
 
+sbs.gem.m8.nstripsu  = 1280
+sbs.gem.m8.nstripsv  = 1024
+sbs.gem.m9.nstripsu  = 1280
+sbs.gem.m9.nstripsv  = 1024
 sbs.gem.m10.nstripsu = 1280
-sbs.gem.m10.nstripsv = 1536
+sbs.gem.m10.nstripsv = 1024
+
 sbs.gem.m11.nstripsu = 1280
-sbs.gem.m11.nstripsv = 1536
+sbs.gem.m11.nstripsv = 1024
 sbs.gem.m12.nstripsu = 1280
-sbs.gem.m12.nstripsv = 1536
+sbs.gem.m12.nstripsv = 1024
 sbs.gem.m13.nstripsu = 1280
-sbs.gem.m13.nstripsv = 1536
+sbs.gem.m13.nstripsv = 1024
 
 sbs.gem.m14.nstripsu = 1280
 sbs.gem.m14.nstripsv = 1536
